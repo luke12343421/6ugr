@@ -39,10 +39,11 @@ client.on('message', async message => {
             channel.id('472917492516257803').send('``;( dls pas de log dls ;(``')
         }
     }else{
+        if(message.content === "!" + " " + "Admin"){
           message.channel.bulkDelete(message | 1).then(() => { });
      message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
     msg.delete(4000);
-     
+     }
     });
   if (message.channel.id === '614864376934957156') {
   if(message.content === "!" + " " + "vérification") {
