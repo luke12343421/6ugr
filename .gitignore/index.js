@@ -71,7 +71,7 @@ client.on('message', async message => {
 
 })
   // pour ton bot login sur serveur
-client.login("NjEzNDA5MzA2NDk0MjM4NzIw.XVxKHQ.ydXaRoUEWWbxw2Adb9sKrT0yHhE"); 
+client.login(process.env.TOKEN); 
 
 function test(message) {
   message.channel.bulkDelete(message | 1).then(() => { });
