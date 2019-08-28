@@ -35,7 +35,7 @@ client.on('message', async message => {
     if (message.channel.id === '472917492516257803') {
         if(message.content === "!" + " " + "Admin") {
              message.channel.bulkDelete(message | 1).then(() => { });
-            if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);
+            if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);
          client.channels.get('472917492516257803').send(process.env.MESSAGE)
         }
     }else{
