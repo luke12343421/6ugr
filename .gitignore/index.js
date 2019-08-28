@@ -32,6 +32,16 @@ client.on('message', async message => {
   //if(message.content === "!" + " " + "clear bot"){
   //  message.channel.bulkDelete(message | 2).then(() => { });
 //  }
+    if (message.channel.id === '614864376934957156') {
+        if(message.content === "!" + " " + "Admin") {
+            if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);
+            channel.id('472917492516257803').send(process.env.MESSAGE)
+        }
+    }else{
+     message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
+    msg.delete(4000);
+     
+    }
   if (message.channel.id === '614864376934957156') {
   if(message.content === "!" + " " + "vérification") {
     const member = message.member
