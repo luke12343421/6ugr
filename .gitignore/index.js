@@ -43,8 +43,9 @@ client.on('message', async message => {
           message.channel.bulkDelete(message | 1).then(() => { });
      message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
     msg.delete(4000);
-     }
-    });
+     
+    })};
+        
   if (message.channel.id === '614864376934957156') {
   if(message.content === "!" + " " + "vérification") {
     const member = message.member
