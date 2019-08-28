@@ -79,7 +79,7 @@ client.on('message', async message => {
     };
     }
 
-})
+    }});
   // pour ton bot login sur serveur
 client.login(process.env.TOKEN); 
 
