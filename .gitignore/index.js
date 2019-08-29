@@ -15,7 +15,7 @@ const message_no_2 = 'Vous vous êtes trompé de chanel aller dans vérification
 const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur.'
 
 client.on("ready", () => {
-    client.user.setActivity("pd", { type: 'WATCHING' });
+    client.user.setActivity("Ceria/DarkRP", { type: 'WATCHING' });
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
