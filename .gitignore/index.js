@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const GroupID1 = ('603284970362109966');
+const GroupID1 = process.env.GRADE
 
 const timer_delete = 9000 // 10000 = 11 S
 
@@ -15,7 +15,7 @@ const message_no_2 = 'Vous vous êtes trompé de chanel aller dans vérification
 const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur.'
 
 client.on("ready", () => {
-    client.user.setActivity("Ceria/DarkRP", { type: 'WATCHING' });
+    client.user.setActivity process.env.JOUER, { type: 'WATCHING' });
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
@@ -32,7 +32,7 @@ client.on('message', async message => {
   //if(message.content === "!" + " " + "clear bot"){
   //  message.channel.bulkDelete(message | 2).then(() => { });
 //  }
-    if (message.channel.id === '607229829242290183') {
+    if (message.channel.id === process.env.ADMIN_COMMAND) {
         if(message.content === "!" + " " + "Admin") {
              message.channel.bulkDelete(message | 1).then(() => { });
             if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);
@@ -46,7 +46,7 @@ client.on('message', async message => {
      
     })};
         
-  if (message.channel.id === '614864376934957156') {
+  if (message.channel.id === process.env.COMMAND_GRADE) {
   if(message.content === "!" + " " + "vérification") {
     const member = message.member
     member.addRole(GroupID1)
