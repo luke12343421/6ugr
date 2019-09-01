@@ -35,13 +35,13 @@ client.on('message', async message => {
   //  message.channel.bulkDelete(message | 2).then(() => { });
 //  }
     if (message.channel.id === process.env.ADMIN_COMMAND) {
-        if(message.content === "!" + " " + "Admin") {
+        if(message.content === prefix + " " + "Admin") {
              message.channel.bulkDelete(message | 1).then(() => { });
             if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);
          client.channels.get('607229829242290183').send(process.env.MESSAGE)
         }
     }else{
-        if(message.content === "!" + " " + "Admin"){
+        if(message.content === prefix + " " + "Admin"){
           message.channel.bulkDelete(message | 1).then(() => { });
      message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
     msg.delete(4000);
@@ -49,7 +49,7 @@ client.on('message', async message => {
     })};
         
   if (message.channel.id === process.env.COMMAND_GRADE) {
-  if(message.content === "!" + " " + "vérification") {
+  if(message.content === prefix + " " + "vérification") {
     const member = message.member
     member.addRole(GroupID1)
     console.log(`${message.author.username}!`),
@@ -59,7 +59,7 @@ client.on('message', async message => {
     console.log(`[Joueur]`)
     message.channel.bulkDelete(message | 1).then(() => { });
   };
-  if(message.content === "!" + " " + "verification") {
+  if(message.content === prefix + " " + "verification") {
     
     const member = message.member
     member.addRole(GroupID1)
@@ -71,13 +71,13 @@ client.on('message', async message => {
     message.channel.bulkDelete(message | 1).then(() => { });
   };        
     }else{
-      if(message.content === "!" + " " + "verification"){
+      if(message.content === prefix + " " + "verification"){
         test(message);
     message.reply(message_no)    .then(msg => {
     msg.delete(timer_delete);
   });
       };
-          if(message.content === "!" + " " + "vérification"){
+          if(message.content === prefix + " " + "vérification"){
         test(message);
            message.reply(message_no)  .then(msg => {
     msg.delete(timer_delete);
