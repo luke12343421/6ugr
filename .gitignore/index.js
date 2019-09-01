@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 const GroupID1 = process.env.GRADE
 
-const timer_delete = 9000 // 10000 = 11 S
+const timer_delete = process.env.TIMES_MESSAGE // 10000 = 11 S
 
 const message_no = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur'
 
