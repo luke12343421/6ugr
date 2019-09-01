@@ -40,16 +40,16 @@ client.on('message', async message => {
         if(message.content === prefix + " " + "Admin") {
              message.channel.bulkDelete(message | 1).then(() => { });
             if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
-    msg.delete(timer_Admin)};;
+    msg.delete(timer_Admin);;
          client.channels.get('607229829242290183').send(process.env.MESSAGE)
-        }
+        })
     }else{
         if(message.content === prefix + " " + "Admin"){
           message.channel.bulkDelete(message | 1).then(() => { });
      message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
-    msg.delete(timer_Admin)};
+    msg.delete(timer_Admin);
      
-    })};
+    })}};
         
   if (message.channel.id === process.env.COMMAND_GRADE) {
   if(message.content === prefix + " " + "vérification") {
@@ -91,8 +91,3 @@ client.on('message', async message => {
     }});
   // pour ton bot login sur serveur
 client.login(process.env.TOKEN); 
-
-function test(message) {
-  message.channel.bulkDelete(message | 1).then(() => { });
-  console.log(`${message.author.username}!, qui a le grade il samuse avec la commands !!!!!!!!`)
-}
