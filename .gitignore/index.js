@@ -33,9 +33,9 @@ client.on("ready", () => {
 
 client.on('message', async message => { 
   if(message.author.bot) return;
-  //if(message.content === "!" + " " + "clear bot"){
-  //  message.channel.bulkDelete(message | 2).then(() => { });
-//  }
+  if(message.content === "!" + " " + "clear bot"){
+   message.channel.bulkDelete(message | 2).then(() => { });
+  }
     if (message.channel.id === process.env.ADMIN_COMMAND) {
         if(message.content === prefix + " " + "Admin") {
              message.channel.bulkDelete(message | 1).then(() => { });
