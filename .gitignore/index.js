@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
+const prefix = process.env.PREFIX
+
 const GroupID1 = process.env.GRADE
 
 const timer_delete = process.env.TIMES_MESSAGE // 10000 = 11 S
