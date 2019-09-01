@@ -23,7 +23,7 @@ client.on("ready", () => {
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
-if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);;
+
         // List all channels
         guild.channels.forEach((channel) => {
             console.log(` -- ${channel.name} (${channel.type}) - ${channel.id} `)
@@ -34,6 +34,7 @@ if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return 
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === "!" + " " + "clear bot"){
+      if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);;
    message.channel.bulkDelete(message | 2).then(() => { });
   }
     if (message.channel.id === process.env.ADMIN_COMMAND) {
