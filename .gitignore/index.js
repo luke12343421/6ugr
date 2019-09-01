@@ -8,6 +8,8 @@ const GroupID1 = process.env.GRADE
 
 const timer_delete = process.env.TIMES_MESSAGE // 10000 = 11 S
 
+const timer_Admin = process.env.TIME_ADMIN
+
 const message_no = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur'
 
 const message_no_3 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur...'
@@ -38,14 +40,14 @@ client.on('message', async message => {
         if(message.content === prefix + " " + "Admin") {
              message.channel.bulkDelete(message | 1).then(() => { });
             if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
-    msg.delete(4000);;
+    msg.delete(timer_Admin)};;
          client.channels.get('607229829242290183').send(process.env.MESSAGE)
         }
     }else{
         if(message.content === prefix + " " + "Admin"){
           message.channel.bulkDelete(message | 1).then(() => { });
      message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
-    msg.delete(4000);
+    msg.delete(timer_Admin)};
      
     })};
         
