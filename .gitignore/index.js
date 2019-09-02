@@ -33,7 +33,7 @@ client.on("ready", () => {
 
 client.on('message', async message => { 
   if(message.author.bot) return;
-  if(message.content === prefix + " " + "test"){
+  if(message.content === prefix + " " + "log" + "server"){
 message.react('👍').then(() => message.react('👎'));
 
 const filter = (reaction, user) => {
@@ -56,7 +56,9 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		}
 	})
 	.catch(collected => {
-		message.reply('erreur');
+		message.reply('erreur').then(msg => {
+msg.delete(timer_Admin)
+    });
 	});
   }
   if(message.content === "!" + " " + "clear bot"){
