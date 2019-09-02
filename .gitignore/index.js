@@ -33,7 +33,7 @@ client.on("ready", () => {
 
 client.on('message', async message => { 
   if(message.author.bot) return;
-  if(message.content === prefix + " " + "log" + "server"){
+  if(message.content === prefix + " " + "test"){
 message.react('👍').then(() => message.react('👎'));
 
 const filter = (reaction, user) => {
