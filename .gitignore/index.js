@@ -33,6 +33,32 @@ client.on("ready", () => {
 
 client.on('message', async message => { 
   if(message.author.bot) return;
+  if(message.content === prefix + " " + "test"){
+message.react('👍').then(() => message.react('👎'));
+
+const filter = (reaction, user) => {
+	return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+};
+
+message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+	.then(collected => {
+		const reaction = collected.first();
+
+		if (reaction.emoji.name === '👍') {
+		member.addRole(GroupID1)
+    console.log(`${message.author.username}!`),
+    console.log(`${message.author.id}!`),
+    console.log(`${message.author.avatarURL}!`)
+		} else {
+    console.log(`${message.author.username}!`),
+    console.log(`${message.author.id}!`),
+    console.log(`${message.author.avatarURL}!`)
+		}
+	})
+	.catch(collected => {
+		message.reply('erreur');
+	});
+  }
   if(message.content === "!" + " " + "clear bot"){
       if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);;
    message.channel.bulkDelete(message | 2).then(() => { });
