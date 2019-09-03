@@ -44,6 +44,7 @@ client.on("ready", () => {
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' }).then(msg => {
     setTimeout(test_1, 4000, 'funky');
     })
+	client.user.setUsername('ceriarpBot')
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
