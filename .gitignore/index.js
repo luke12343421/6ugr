@@ -18,8 +18,26 @@ const message_no_2 = 'Vous vous êtes trompé de chanel aller dans vérification
 
 const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur.'
 
+function test_4(arg){
+  setTimeout(test_1, procces.env.timer_event, 'funky');
+    client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' });
+}
+function test_3(arg){
+   setTimeout(test_4, procces.env.timer_event, 'funky');
+     client.user.setActivity ("Ceria/DarkRP...", { type: 'WATCHING' });
+}
+function test_2(arg){
+      setTimeout(test_3, procces.env.timer_event, 'funky');
+        client.user.setActivity ("Ceria/DarkRP..", { type: 'WATCHING' });
+}
+function test_1(arg) {
+  setTimeout(test_2, procces.env.timer_event, 'funky');
+  client.user.setActivity ("Ceria/DarkRP.", { type: 'WATCHING' });
+}
 client.on("ready", () => {
-    client.user.setActivity (process.env.JOUER, { type: 'WATCHING' });
+    client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' }).then(msg => {
+    setTimeout(test_1, 1000, 'funky');
+    })
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
