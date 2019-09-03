@@ -10,6 +10,8 @@ const timer_delete = process.env.TIMES_MESSAGE // 10000 = 11 S
 
 const timer_Admin = process.env.TIME_ADMIN
 
+const timer_event = process.env.TIMER_EVENT
+
 const message_no = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur'
 
 const message_no_3 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur...'
@@ -19,24 +21,24 @@ const message_no_2 = 'Vous vous êtes trompé de chanel aller dans vérification
 const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur.'
 
 function test_4(arg){
-  setTimeout(test_1, procces.env.timer_event, 'funky');
+  setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' });
 }
 function test_3(arg){
-   setTimeout(test_4, procces.env.timer_event, 'funky');
+   setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("Ceria/DarkRP...", { type: 'WATCHING' });
 }
 function test_2(arg){
-      setTimeout(test_3, procces.env.timer_event, 'funky');
+      setTimeout(test_3, timer_event, 'funky');
         client.user.setActivity ("Ceria/DarkRP..", { type: 'WATCHING' });
 }
 function test_1(arg) {
-  setTimeout(test_2, procces.env.timer_event, 'funky');
+  setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("Ceria/DarkRP.", { type: 'WATCHING' });
 }
 client.on("ready", () => {
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' }).then(msg => {
-    setTimeout(test_1, 1000, 'funky');
+    setTimeout(test_1, 4000, 'funky');
     })
     console.log("Servers:")
     client.guilds.forEach((guild) => {
