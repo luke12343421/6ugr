@@ -88,10 +88,11 @@ msg.delete(timer_Admin)
   }
     if (message.channel.id === process.env.ADMIN_COMMAND) {
         if(message.content === prefix + " " + "Admin") {
-             message.channel.bulkDelete(message | 2).then(() => { });
+             message.channel.bulkDelete(message | 1).then(() => { });
             if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
     msg.delete(timer_Admin).catch(console.error);;
          client.channels.get('607229829242290183').send(process.env.MESSAGE)
+		    message.channel.bulkDelete(message | 1).then(() => { });
         })
     }else{
         if(message.content === prefix + " " + "Admin"){
