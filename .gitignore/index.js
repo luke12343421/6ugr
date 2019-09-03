@@ -55,35 +55,62 @@ client.on("ready", () => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-message.react('👍').then(() => message.react('👎'));
+const a = message.guild.roles.get('614095413942943758');
 
-const filter = (reaction, user) => {
-	return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-};
+const filter = (reaction, user) => ['✅','❎'].includes(reaction.emoji.name) && user.id === message.author.id;
 
-message.awaitReactions(filter, { max: 99999999999, time: 9999999999999999999999999999999999999, errors: ['time'] })
-	.then(collected => {
-		const reaction = collected.first();
+const embed = new RichEmbed()
+    .setTitle('a')
+    .setDescription(`
+    
+    ✅ ${a.toString()}
+    ❎ ❎❎❎❎❎❎❎❎❎❎
 
-		if (reaction.emoji.name === '👍') {
-		member.addRole(GroupID1)
-    console.log(`${message.author.username}!`),
-    console.log(`${message.author.id}!`),
-    console.log(`${message.author.avatarURL}!`)
-		} else {
-    console.log(`${message.author.username}!`),
-    console.log(`${message.author.id}!`),
-    console.log(`${message.author.avatarURL}!`)
-		}
-	})
-	.catch(collected => {
-		message.reply('erreur').then(msg => {
-msg.delete(timer_Admin)
-    });
+    
+    `)
+    .setColor(0xdd9323)
+    .setFooter(`ID: ${message.author.id}`);
+
+  message.channel.send(embed).then(async msg =>{
+
+   await msg.react('✅');
+   await msg.react('❎');
+
+msg.awaitReactions(filter,{
+  max: 2,
+  time: 90000,
+  errors: ['Time']
+}).then(collected => {
+const reaction = collected.first();
+
+switch (reaction.emoji.name){
+  case '✅':
+     message.member.addRole(a).catch(err =>{
+          console.log(err)
+          return message.channel.send(`error ${a.name}`)
+     });
+     break;
+  case '❎':
+  if(message.member.roles.has(a)){
+             console.log(err)
+         return message.channel.send(`error ${a.name}`)
+  }
+    message.member.send(';(').catch(err =>{
+         console.log(err)
+         return message.channel.send(`error ${a.name}`)
+    })
+    message.channel.send(`${message.member.name} a faire le ❎`)
+    break;
+}
+}).then(collected => {
+return message.channel.send(`@${message.author.username} a les grade de ${a.name} a`).then (msg =>{
+msg.delete(1000)
+});
+});
 	});
   }
   if(message.content === "!" + " " + "clear bot"){
-      if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").catch(console.error);;
+      process.env.COMMAND_FLY
    message.channel.bulkDelete(message | 2).then(() => { });
   }
     if (message.channel.id === process.env.ADMIN_COMMAND) {
