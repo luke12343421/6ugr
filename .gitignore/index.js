@@ -23,18 +23,22 @@ const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification
 function test_4(arg){
   setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' });
+	client.user.setusername('ceriarpBot')
 }
 function test_3(arg){
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("Ceria/DarkRP...", { type: 'WATCHING' });
+	client.user.setusername('ceriarpBot...')
 }
 function test_2(arg){
       setTimeout(test_3, timer_event, 'funky');
         client.user.setActivity ("Ceria/DarkRP..", { type: 'WATCHING' });
+	client.user.setusername('ceriarpBot..')
 }
 function test_1(arg) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("Ceria/DarkRP.", { type: 'WATCHING' });
+	client.user.setusername('ceriarpBot.')
 }
 client.on("ready", () => {
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' }).then(msg => {
