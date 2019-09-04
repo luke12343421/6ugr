@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
-
+// test
 const prefix = process.env.PREFIX
 
 const live = process.env.LIVE
