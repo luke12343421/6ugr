@@ -4,6 +4,8 @@ const client = new Discord.Client();
 
 const prefix = process.env.PREFIX
 
+const live = process.env.LIVE
+
 const GroupID1 = process.env.GRADE
 
 const true_or_false = process.env.TRUEORFALSE
@@ -27,7 +29,7 @@ function test_4(arg){
   setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (``, { type: 'STREAMING'})
+	client.user.setActivity (`live qui est ${live}`, { type: 'STREAMING'})
 	}
 }
 function test_3(arg){
@@ -35,7 +37,7 @@ function test_3(arg){
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("Ceria/DarkRP...", { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (``, { type: 'STREAMING'})
+	client.user.setActivity (`live qui est ${live}.`, { type: 'STREAMING'})
 	}
 }
 function test_2(arg){
@@ -43,7 +45,7 @@ function test_2(arg){
       setTimeout(test_3, timer_event, 'funky');
         client.user.setActivity ("Ceria/DarkRP..", { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (``, { type: 'STREAMING'})
+	client.user.setActivity (`live qui est ${live}..`, { type: 'STREAMING'})
 	}
 }
 function test_1(arg) {
@@ -51,7 +53,7 @@ function test_1(arg) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("Ceria/DarkRP.", { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (``, { type: 'STREAMING'})
+	client.user.setActivity (`live qui est ${live}...`, { type: 'STREAMING'})
 	}
 }
 client.on("ready", () => {
