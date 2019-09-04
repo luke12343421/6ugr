@@ -30,6 +30,7 @@ function test_4(arg){
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`live qui est ${live}`, { type: 'STREAMING'})
+		  setTimeout(test_1, timer_event, 'funky');
 	}
 }
 function test_3(arg){
@@ -38,6 +39,7 @@ function test_3(arg){
      client.user.setActivity ("Ceria/DarkRP...", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`live qui est ${live}.`, { type: 'STREAMING'})
+		   setTimeout(test_4, timer_event, 'funky');
 	}
 }
 function test_2(arg){
@@ -46,14 +48,16 @@ function test_2(arg){
         client.user.setActivity ("Ceria/DarkRP..", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`live qui est ${live}..`, { type: 'STREAMING'})
+		     setTimeout(test_3, timer_event, 'funky');
 	}
 }
 function test_1(arg) {
-	if(true_or_false == true) {
+	if(true_or_false == false) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("Ceria/DarkRP.", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`live qui est ${live}...`, { type: 'STREAMING'})
+		  setTimeout(test_2, timer_event, 'funky');
 	}
 }
 client.on("ready", () => {
