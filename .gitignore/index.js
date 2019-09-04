@@ -58,7 +58,7 @@ function test_1(arg) {
 }
 client.on("ready", () => {
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' }).then(msg => {
-
+    setTimeout(test_1, 4000, 'funky');
     })
     console.log("Servers:")
     client.guilds.forEach((guild) => {
