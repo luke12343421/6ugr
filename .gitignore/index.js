@@ -6,6 +6,8 @@ const prefix = process.env.PREFIX
 
 const GroupID1 = process.env.GRADE
 
+const true_or_false = process.env.TRUEORFALSE
+
 const timer_delete = process.env.TIMES_MESSAGE // 10000 = 11 S
 
 const timer_Admin = process.env.TIME_ADMIN
@@ -21,26 +23,41 @@ const message_no_2 = 'Vous vous êtes trompé de chanel aller dans vérification
 const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur.'
 
 function test_4(arg){
+	if(true_or_false == true) {
   setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' });
+	}else{
+	client.user.setActivity (``, { type: 'STREAMING'})
+	}
 }
 function test_3(arg){
+	if(true_or_false == true) {
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("Ceria/DarkRP...", { type: 'WATCHING' });
+	}else{
+	client.user.setActivity (``, { type: 'STREAMING'})
+	}
 }
 function test_2(arg){
+	if(true_or_false == true) {
       setTimeout(test_3, timer_event, 'funky');
         client.user.setActivity ("Ceria/DarkRP..", { type: 'WATCHING' });
+	}else{
+	client.user.setActivity (``, { type: 'STREAMING'})
+	}
 }
 function test_1(arg) {
+	if(true_or_false == true) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("Ceria/DarkRP.", { type: 'WATCHING' });
+	}else{
+	client.user.setActivity (``, { type: 'STREAMING'})
+	}
 }
 client.on("ready", () => {
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' }).then(msg => {
     setTimeout(test_1, 4000, 'funky');
     })
-	client.user.setUsername("ceriarpBot")
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
@@ -54,7 +71,7 @@ client.on("ready", () => {
 
 client.on('message', async message => { 
   if(message.author.bot) return;
-  if(message.content === prefix + " " + "test"){
+  if(message.content === prefix + " " + "test" + " " +"dev"){
 const a = message.guild.roles.get('614095413942943758');
 
 const filter = (reaction, user) => ['✅','❎'].includes(reaction.emoji.name) && user.id === message.author.id;
@@ -95,7 +112,7 @@ switch (reaction.emoji.name){
              console.log(err)
          return message.channel.send(`error ${a.name}`)
   }
-    message.member.send(';(').catch(err =>{
+    message.member.send('error ban or kick ???').catch(err =>{
          console.log(err)
          return message.channel.send(`error ${a.name}`)
     })
