@@ -25,28 +25,28 @@ const message_no_2 = 'Vous vous êtes trompé de chanel aller dans vérification
 const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur.'
 
 function test_4(arg){
-	if(true_or_false == true) {
+	if(true_or_false == false) {
   setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' });
-	}elseif(true_or_false == true){
+	}elseif(true_or_false == true);{
 	client.user.setActivity (`live qui est ${live}`, { type: 'STREAMING'})
 		  setTimeout(test_1, timer_event, 'funky');
 	}
 }
 function test_3(arg){
-	if(true_or_false == true) {
+	if(true_or_false == false) {
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("Ceria/DarkRP...", { type: 'WATCHING' });
-	}elseif(true_or_false == true){
+	}elseif(true_or_false == true);{
 	client.user.setActivity (`live qui est ${live}.`, { type: 'STREAMING'})
 		   setTimeout(test_4, timer_event, 'funky');
 	}
 }
 function test_2(arg){
-	if(true_or_false == true) {
+	if(true_or_false == false) {
       setTimeout(test_3, timer_event, 'funky');
         client.user.setActivity ("Ceria/DarkRP..", { type: 'WATCHING' });
-	}elseif(true_or_false == true){
+	}elseif(true_or_false == true);{
 	client.user.setActivity (`live qui est ${live}..`, { type: 'STREAMING'})
 		     setTimeout(test_3, timer_event, 'funky');
 	}
@@ -55,7 +55,7 @@ function test_1(arg) {
 	if(true_or_false == false) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("Ceria/DarkRP.", { type: 'WATCHING' });
-	}elseif(true_or_false == true){
+	}elseif(true_or_false == true);{
 	client.user.setActivity (`live qui est ${live}...`, { type: 'STREAMING'})
 		  setTimeout(test_2, timer_event, 'funky');
 	}
