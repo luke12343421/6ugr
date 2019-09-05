@@ -31,7 +31,7 @@ function test_4(arg){
   setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity ("Ceria/DarkRP", { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (`${live} !`, { type: 'STREAMING'})
+	client.user.setActivity (`${live} !`, { type: 'STREAMING, url: url_live})
 		  setTimeout(test_1, timer_event, 'funky');
 	}
 }
@@ -49,7 +49,7 @@ function test_2(arg){
       setTimeout(test_3, timer_event, 'funky');
         client.user.setActivity ("Ceria/DarkRP..", { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (`${live}.. !`, { type: 'STREAMING'})
+	client.user.setActivity (`${live}.. !`, { type: 'STREAMING', url: url_live})
 		     setTimeout(test_3, timer_event, 'funky');
 	}
 }
@@ -58,7 +58,7 @@ function test_1(arg) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("Ceria/DarkRP.", { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (`${live}... !`, { type: 'STREAMING'})
+	client.user.setActivity (`${live}... !`, { type: 'STREAMING', url: url_live})
 		  setTimeout(test_2, timer_event, 'funky');
 	}
 }
