@@ -4,6 +4,8 @@ const client = new Discord.Client();
 // test
 const prefix = process.env.PREFIX
 
+const url_live = process.env.URL_LIVE_2
+
 const live = process.env.LIVE
 
 const GroupID1 = process.env.GRADE
@@ -38,7 +40,7 @@ function test_3(arg){
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("Ceria/DarkRP...", { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (`${live}. !`, { type: 'STREAMING'})
+	client.user.setActivity (`${live}. !`, { type: 'STREAMING', url: url_live})
 		   setTimeout(test_4, timer_event, 'funky');
 	}
 }
