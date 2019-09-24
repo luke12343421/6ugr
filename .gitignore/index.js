@@ -147,7 +147,7 @@ msg.delete(1000)
 		    message.channel.bulkDelete(message | 1).then(() => { });
         })
     }else{
-        if(message.content === prefix + " " + "Admin"){
+        if(message.content === prefix + " " + "Admins"){
           message.channel.bulkDelete(message | 1).then(() => { });
      message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
     msg.delete(timer_Admin);
@@ -192,5 +192,6 @@ msg.delete(1000)
     }
 
     }});
+// allo
   // pour ton bot login sur serveur
 client.login(process.env.TOKEN); 
