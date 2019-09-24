@@ -29,7 +29,7 @@ const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification
 function test_4(arg){
 	if(true_or_false == "!~") {
   setTimeout(test_1, timer_event, 'funky');
-    client.user.setActivity ("bot creer par lvailllan06:2019 ", { type: 'WATCHING' });
+    client.user.setActivity ("lvailllan06:2019 dev new commande ", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live} !`, { type: 'STREAMING', url: url_live})
 		  setTimeout(test_1, timer_event, 'funky');
@@ -38,7 +38,7 @@ function test_4(arg){
 function test_3(arg){
 	if(true_or_false == "!~") {
    setTimeout(test_4, timer_event, 'funky');
-     client.user.setActivity ("lvailllan06:2019  !!!", { type: 'WATCHING' });
+     client.user.setActivity ("lvailllan06:2019 dev new commande  !!!", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live}. !`, { type: 'STREAMING', url: url_live})
 		   setTimeout(test_4, timer_event, 'funky');
@@ -47,7 +47,7 @@ function test_3(arg){
 function test_2(arg){
 	if(true_or_false == "!~") {
       setTimeout(test_3, timer_event, 'funky');
-        client.user.setActivity ("lvailllan06:2019  !!", { type: 'WATCHING' });
+        client.user.setActivity ("lvailllan06:2019 dev new commande  !!", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live}.. !`, { type: 'STREAMING', url: url_live})
 		     setTimeout(test_3, timer_event, 'funky');
@@ -56,14 +56,14 @@ function test_2(arg){
 function test_1(arg) {
 	if(true_or_false == "!~") {
   setTimeout(test_2, timer_event, 'funky');
-  client.user.setActivity ("lvailllan06:2019  !", { type: 'WATCHING' });
+  client.user.setActivity ("lvailllan06:2019 dev new commande  !", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live}... !`, { type: 'STREAMING', url: url_live})
 		  setTimeout(test_2, timer_event, 'funky');
 	}
 }
 client.on("ready", () => {
-    client.user.setActivity ("bot start ;)", { type: 'WATCHING' }).then(msg => {
+    client.user.setActivity ("bot start ;) ", { type: 'WATCHING' }).then(msg => {
     setTimeout(test_1, 4000, 'funky');
     })
     console.log("Servers:")
