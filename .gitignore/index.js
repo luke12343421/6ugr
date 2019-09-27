@@ -24,7 +24,7 @@ const message_no_3 = 'Vous vous êtes trompé de chanel aller dans vérification
 
 const message_no_2 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur..'
 
-const message_no_1 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur.'
+const message_no_1 = "`code error ||5035$2|| `"
 
 function test_4(arg){
 	if(true_or_false == "!~") {
@@ -158,7 +158,7 @@ client.on('message', async message => {
   if(message.content === prefix + " " + "vérification") {
 	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
     message.channel.bulkDelete(message | 1).then(() => { });
-    message.reply(message_no).then(msg => {
+    message.reply(message_no_1).then(msg => {
     msg.delete(timer_delete);
     })
 	  }else{
@@ -169,7 +169,7 @@ client.on('message', async message => {
   if(message.content === prefix + " " + "verification") {
 	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
     message.channel.bulkDelete(message | 1).then(() => { });
-    message.reply(message_no).then(msg => {
+    message.reply(message_no_1).then(msg => {
     msg.delete(timer_delete);
     })
 	  }else{
