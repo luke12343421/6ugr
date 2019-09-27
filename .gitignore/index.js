@@ -105,7 +105,7 @@ client.on('message', async message => {
 //  max: 2,
  // time: 90000,
 //  errors: ['Time']
-}).then(collected => {
+// }).then(collected => {
 //const reaction = collected.first();
 //
 //switch (reaction.emoji.name){
@@ -180,8 +180,8 @@ client.on('message', async message => {
   });
     };
     }
-
-    }});
+    }
+    );
 // allo
   // pour ton bot login sur serveur
 client.login(process.env.TOKEN); 
