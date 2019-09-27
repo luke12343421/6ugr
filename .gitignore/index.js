@@ -79,102 +79,95 @@ client.on("ready", () => {
 
 client.on('message', async message => { 
   if(message.author.bot) return;
-  if(message.content === prefix + " " + "test" + " " +"dev"){
-const a = message.guild.roles.get('614095413942943758');
-
-const filter = (reaction, user) => ['✅','❎'].includes(reaction.emoji.name) && user.id === message.author.id;
-
-const embed = new RichEmbed()
-    .setTitle('a')
-    .setDescription(`
-    
-    ✅ ${a.toString()}
-    ❎ ❎❎❎❎❎❎❎❎❎❎
-
-    
-    `)
-    .setColor(0xdd9323)
-    .setFooter(`ID: ${message.author.id}`);
-
-  message.channel.send(embed).then(async msg =>{
-
-   await msg.react('✅');
-   await msg.react('❎');
-
-msg.awaitReactions(filter,{
-  max: 2,
-  time: 90000,
-  errors: ['Time']
+  //if(message.content === prefix + " " + "test" + " " +"hgfjdhterjtrthfgjtrhfeghjtrgfjtrhgdghterjgrhrhtrejhtehtegrfdhtrhjtreherthtehfgfdhrtjyrdhghdtyjhtrshgfsrgtrshghfshfghfshgfs"){
+//const a = message.guild.roles.get('614095413942943758');
+//
+//const filter = (reaction, user) => ['✅','❎'].includes(reaction.emoji.name) && user.id === message.author.id;
+//
+//c//onst embed = new RichEmbed()
+///    .setTitle('a')
+//    .setDescription(`
+//   
+//    ✅ ${a.toString()}
+//    ❎ ❎❎❎❎❎❎❎❎❎❎
+//
+  //  
+ //   `)
+ //   .setColor(0xdd9323)
+ //   .setFooter(`ID: ${message.author.id}`);
+//
+  //message.channel.send(embed).then(async msg =>{
+//
+//   await msg.react('✅');
+//   await msg.react('❎');
+///
+//msg.awaitReactions(filter,{
+//  max: 2,
+ // time: 90000,
+//  errors: ['Time']
 }).then(collected => {
-const reaction = collected.first();
-
-switch (reaction.emoji.name){
-  case '✅':
-     message.member.addRole(a).catch(err =>{
-          console.log(err)
-          return message.channel.send(`error ${a.name}`)
-     });
-     break;
-  case '❎':
-  if(message.member.roles.has(a)){
-             console.log(err)
-         return message.channel.send(`error ${a.name}`)
-  }
-    message.member.send('error ban or kick ???').catch(err =>{
-         console.log(err)
-         return message.channel.send(`error ${a.name}`)
-    })
-    message.channel.send(`${message.member.name} a faire le ❎`)
-    break;
-}
-}).then(collected => {
-return message.channel.send(`@${message.author.username} a les grade de ${a.name} a`).then (msg =>{
-msg.delete(1000)
-});
-});
-	});
-  }
-  if(message.content === "!" + " " + "clear bot"){
-      process.env.COMMAND_FLY
-   message.channel.bulkDelete(message | 2).then(() => { });
-  }
-    if (message.channel.id === process.env.ADMIN_COMMAND) {
-        if(message.content === prefix + " " + "Admin") {
-             message.channel.bulkDelete(message | 1).then(() => { });
-            if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
-    msg.delete(timer_Admin).catch(console.error);;
-         client.channels.get('607229829242290183').send(process.env.MESSAGE)
-		    message.channel.bulkDelete(message | 1).then(() => { });
-        })
-    }else{
-        if(message.content === prefix + " " + "Admins"){
-          message.channel.bulkDelete(message | 1).then(() => { });
-     message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
-    msg.delete(timer_Admin);
-     
-    })}};
+//const reaction = collected.first();
+//
+//switch (reaction.emoji.name){
+ // case '✅':
+//     message.member.addRole(a).catch(err =>{
+//          console.log(err)
+  //        return message.channel.send(`error ${a.name}`)
+ //    });
+ //    break;
+ // case '❎':
+//  if(message.member.roles.has(a)){
+ //            console.log(err)
+ //        return message.channel.send(`error ${a.name}`)
+//  }
+  //  message.member.send('error ban or kick ???').catch(err =>{
+ //        console.log(err)
+ //        return message.channel.send(`error ${a.name}`)
+ //   })
+  //  message.channel.send(`${message.member.name} a faire le ❎`)
+ //   break;
+//}//
+//}).then(collected => {
+//return message.channel.send(`@${message.author.username} a les grade de ${a.name} a`).then (msg =>{
+//msg.delete(1000)
+//});
+//});
+///	});
+  //}
+  //if(message.content === "!" + " " + "clear bot"){
+   //   process.env.COMMAND_FLY
+  // message.channel.bulkDelete(message | 2).then(() => { });
+  //}
+ //   if (message.channel.id === process.env.ADMIN_COMMAND) {
+ //       if(message.content === prefix + " " + "fgsgsgrgsgrgfdgsthtrshrfhgfshgfsgfkdgonkfdjpnibgfinjbnitrinpgboemigonutenrihb") {
+ //            message.channel.bulkDelete(message | 1).then(() => { });
+  //          if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
+ //  msg.delete(timer_Admin).catch(console.error);;
+  //       client.channels.get('607229829242290183').send(process.env.MESSAGE)
+//		    message.channel.bulkDelete(message | 1).then(() => { });
+   //     })
+//    }else{
+ //       if(message.content === prefix + " " + "Admins"){
+ //         message.channel.bulkDelete(message | 1).then(() => { });
+ //    message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
+ //   msg.delete(timer_Admin);
+/
+ //   })}};
         
   if (message.channel.id === process.env.COMMAND_GRADE) {
   if(message.content === prefix + " " + "vérification") {
+	  if(message.member.roles.has(role.id("626613959453179914")){
     const member = message.member
     member.addRole(GroupID1)
-    console.log(`${message.author.username}!`),
-    console.log(`${message.author.id}!`),
-    console.log(`${message.author.avatarURL}!`),
-    //console.log(client.channels.get('613440449260290049')//.send(`${message.author.username}! id = ${message.author.id}`))
-    console.log(`[Joueur]`)
     message.channel.bulkDelete(message | 1).then(() => { });
   };
+  };
   if(message.content === prefix + " " + "verification") {
-    
+	  	  if(message.member.roles.has(role.id("626613959453179914")){
     const member = message.member
     member.addRole(GroupID1)
-    console.log(`${message.author.username}!`),
-    console.log(`${message.author.id}!`),
-    console.log(`${message.author.avatarURL}!`),
-    //console.log(client.channels.get('613440449260290049')//.send(`${message.author.username}! id = ${message.author.id}`))
-    console.log(`[Joueur]`)
     message.channel.bulkDelete(message | 1).then(() => { });
+  };
   };        
     }else{
       if(message.content === prefix + " " + "verification"){
