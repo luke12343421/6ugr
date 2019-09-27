@@ -56,7 +56,7 @@ function test_2(arg){
 function test_1(arg) {
 	if(true_or_false == "!~") {
   setTimeout(test_2, timer_event, 'funky');
-  client.user.setActivity (" rien !", { type: 'WATCHING' });
+  client.user.setActivity ("rien !", { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live}... !`, { type: 'STREAMING', url: url_live})
 		  setTimeout(test_2, timer_event, 'funky');
