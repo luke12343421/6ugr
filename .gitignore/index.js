@@ -151,7 +151,7 @@ client.on('message', async message => {
  //         message.channel.bulkDelete(message | 1).then(() => { });
  //    message.reply("**:x: Vous n'avez pas la permission dls**").then(msg => {
  //   msg.delete(timer_Admin);
-/
+//
  //   })}};
         
   if (message.channel.id === process.env.COMMAND_GRADE) {
