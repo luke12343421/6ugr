@@ -156,14 +156,14 @@ client.on('message', async message => {
         
   if (message.channel.id === process.env.COMMAND_GRADE) {
   if(message.content === prefix + " " + "vérification") {
-	  if(message.member.roles.has(role.id("626613959453179914")){
+	if(message.member.roles.has(role.id){
     const member = message.member
     member.addRole(GroupID1)
     message.channel.bulkDelete(message | 1).then(() => { });
   };
   };
   if(message.content === prefix + " " + "verification") {
-	  	  if(message.member.roles.has(role.id("626613959453179914")){
+	  	  if(message.member.roles.has(role.id){
     const member = message.member
     member.addRole(GroupID1)
     message.channel.bulkDelete(message | 1).then(() => { });
