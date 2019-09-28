@@ -176,51 +176,51 @@ client.on('message', async message => {
   if (message.content === "ok"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-  }
-  if (message.content === "mec"){
+  })
+  if(message.content === "mec"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-  }	  
+  }	)  
   if (message.content === "Ok"){
   message.reply("nope").then(msg => {
   msg.delete(timer_delete);
-  }
+  })
   if (message.content === "oK"){
   message.reply("nope").then(msg => {
   msg.delete(timer_delete);
-  }
+  })
 if (message.content === "OK"){
 message.reply("nope").then(msg => {
 msg.delete(timer_delete);
-}
+})
   if (message.content === "Mec"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-  }
+  })
   if (message.content === "mEc"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-  }
+  })
   if (message.content === "meC"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-  }
+  })
   if (message.content === "MeC"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-  }
+  })
   if (message.content === "MEc"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-  }
+  })
   if (message.content === "cc"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-  }
+  })
 					   if (message.content === "Cc"){
 	      message.reply("nope").then(msg => {
     msg.delete(timer_delete);
-	      }
+	      })
   if(message.content === prefix + " " + "vérification") {
 	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
     message.channel.bulkDelete(message | 1).then(() => { });
