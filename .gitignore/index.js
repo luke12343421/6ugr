@@ -22,7 +22,7 @@ const message_no = 'Vous vous êtes trompé de chanel aller dans vérification p
 
 const message_no_3 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur...'
 
-const message_no_2 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur..'
+const message_no_2 = '`code error: 5933453`'
 
 const message_no_1 = "`code error: 5035$2 `"
 
@@ -63,7 +63,7 @@ function test_1(arg) {
 	}
 }
 client.on("ready", () => {
-    client.user.setActivity ("bot reload ;) 😉", { type: 'WATCHING' }).then(msg => {
+    client.user.setActivity ("bot reload or mise ajour ;) 😉", { type: 'WATCHING' }).then(msg => {
     setTimeout(test_1, 4000, 'funky');
     })
     console.log("Servers:")
@@ -79,6 +79,24 @@ client.on("ready", () => {
 
 client.on('message', async message => { 
   if(message.author.bot) return;
+	if(message.content === prefix + " " + "clear"){
+	if(message.member.roles.some(r=>["Modérateur PNF", "Responsable PNF"].includes(r.name)) ) {
+		    message.channel.bulkDelete(message | 5).then(() => { });
+		
+	}else{
+				  message.reply(message_no_2).then(msg => {
+    msg.delete(timer_delete);	
+	})	
+	}}
+	
+	if(message.content === prefix + " " + "message"){
+        if(message.member.roles.some(r=>["Modérateur PNF", "Responsable PNF"].includes(r.name)) ) {
+                           message.channel.send("||@everyone||||@here|| faire ca pour avoir le grade `! vérification` ou `! verification`")
+			  }else{
+			  message.reply(message_no_2).then(msg => {
+    msg.delete(timer_delete);	
+			  })
+	}}
   //if(message.content === prefix + " " + "test" + " " +"hgfjdhterjtrthfgjtrhfeghjtrgfjtrhgdghterjgrhrhtrejhtehtegrfdhtrhjtreherthtehfgfdhrtjyrdhghdtyjhtrshgfsrgtrshghfshfghfshgfs"){
 //const a = message.guild.roles.get('614095413942943758');
 //
@@ -155,6 +173,7 @@ client.on('message', async message => {
  //   })}};
         
   if (message.channel.id === process.env.COMMAND_GRADE) {
+	  
   if(message.content === prefix + " " + "vérification") {
 	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
     message.channel.bulkDelete(message | 1).then(() => { });
@@ -190,9 +209,7 @@ client.on('message', async message => {
     msg.delete(timer_delete);
   });
     };
-    }
-    }
-    );
+  }});
 // allo
   // pour ton bot login sur serveur
 client.login(process.env.TOKEN); 
