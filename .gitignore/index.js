@@ -80,7 +80,7 @@ client.on("ready", () => {
 client.on('message', async message => { 
   if(message.author.bot) return;
 	if(message.content === prefix + " " + "clear"){
-	if(message.member.roles.some(r=>["Modérateur PNF", "Responsable PNF"].includes(r.name)) ) {
+	if(message.member.roles.some(r=>["Modérateur PCF", "Responsable PCF"].includes(r.name)) ) {
 		    message.channel.bulkDelete(message | 5).then(() => { });
 		
 	}else{
@@ -90,7 +90,7 @@ client.on('message', async message => {
 	}}
 	
 	if(message.content === prefix + " " + "message"){
-        if(message.member.roles.some(r=>["Modérateur PNF", "Responsable PNF"].includes(r.name)) ) {
+        if(message.member.roles.some(r=>["Modérateur PCF", "Responsable PCF"].includes(r.name)) ) {
                            message.channel.send("||@everyone||||@here|| faire ca pour avoir le grade `! vérification` ou `! verification`")
 			  }else{
 			  message.reply(message_no_2).then(msg => {
