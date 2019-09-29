@@ -76,7 +76,23 @@ client.on("ready", () => {
         })
     })
 });
+client.on('message', async message => { 
+    if(message.author.bot) return;
+      if (message.channel.id === process.env.COMMAND_GRADE) {
 
+      }else{
+            if(message.content === prefix + " " + "Verification"){
+              test(message);
+    message.reply(message_no)    .then(msg => {
+    msg.delete(timer_delete);
+    })};
+    if(message.content === prefix + " " + "Vérification"){
+              test(message);
+    message.reply(message_no)    .then(msg => {
+    msg.delete(timer_delete);
+    });
+    }};
+})
 client.on('message', async message => { 
   if(message.author.bot) return;
 	if(message.content === prefix + " " + "clear"){
@@ -88,10 +104,10 @@ client.on('message', async message => {
     msg.delete(timer_delete);	
 	})	
 	}}
-	
+	// message_verification
 	if(message.content === prefix + " " + "message"){
         if(message.member.roles.some(r=>["Modérateur PCF", "Responsable PCF"].includes(r.name)) ) {
-                           message.channel.send("||@everyone||||@here|| faire ca pour avoir le grade `! vérification` ou `! verification`")
+                           message.channel.send(process.env.message_verification)
 			  }else{
 			  message.reply(message_no_2).then(msg => {
     msg.delete(timer_delete);	
@@ -173,7 +189,28 @@ client.on('message', async message => {
  //   })}};
         
   if (message.channel.id === process.env.COMMAND_GRADE) {
-
+  if(message.content === prefix + " " + "Vérification") {
+	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
+    message.channel.bulkDelete(message | 1).then(() => { });
+    message.reply(message_no_1).then(msg => {
+    msg.delete(timer_delete);
+    })
+	  }else{
+    message.member.addRole(GroupID1)
+     message.channel.bulkDelete(message | 1).then(() => { });
+    }
+	    if(message.content === prefix + " " + "Verification") {
+	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
+    message.channel.bulkDelete(message | 1).then(() => { });
+    message.reply(message_no_1).then(msg => {
+    msg.delete(timer_delete);
+    })
+	  }else{
+    message.member.addRole(GroupID1)
+     message.channel.bulkDelete(message | 1).then(() => { });
+    }
+  };
+  };
   if(message.content === prefix + " " + "vérification") {
 	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
     message.channel.bulkDelete(message | 1).then(() => { });
