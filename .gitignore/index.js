@@ -178,7 +178,7 @@ client.on('message', async message => {
  //   msg.delete(timer_Admin);
 //
  //   })}};
-      if (message.content prefix + " " + 'clear') { 
+      if (message.content === prefix + " " + 'clear') { 
 
         async function purge() {
             message.delete(); 
