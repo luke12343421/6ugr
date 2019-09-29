@@ -95,15 +95,6 @@ client.on('message', async message => {
 })
 client.on('message', async message => { 
   if(message.author.bot) return;
-	if(message.content === prefix + " " + "clear"){
-	if(message.member.roles.some(r=>["Modérateur PCF", "Responsable PCF"].includes(r.name)) ) {
-		    message.channel.bulkDelete(message | 5).then(() => { });
-		
-	}else{
-				  message.reply(message_no_2).then(msg => {
-    msg.delete(timer_delete);	
-	})	
-	}}
 	// message_verification
 	if(message.content === prefix + " " + "message"){
         if(message.member.roles.some(r=>["Modérateur PCF", "Responsable PCF"].includes(r.name)) ) {
@@ -187,7 +178,37 @@ client.on('message', async message => {
  //   msg.delete(timer_Admin);
 //
  //   })}};
-        
+      if (message.content prefix + " " + 'clear') { 
+
+        async function purge() {
+            message.delete(); 
+
+           
+            if (!message.member.roles.find("Modérateur PCF", "Responsable PCF")) { 
+                message.channel.send('`error: 42562`'); 
+                return; 
+            }
+
+  
+            if (isNaN(args[1])) {
+              
+                message.channel.send('`error:` `54253`');
+   
+                return;
+            }
+
+            const fetched = await message.channel.fetchMessages({limit: args[1]}); 
+             
+
+            // Deleting the messages
+            message.channel.bulkDelete(fetched)
+                .catch(error => message.channel.send(`Error: ${error}`));
+
+        }
+
+        purge();
+
+    }      
   if (message.channel.id === process.env.COMMAND_GRADE) {
   if(message.content === prefix + " " + "Vérification") {
 	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
