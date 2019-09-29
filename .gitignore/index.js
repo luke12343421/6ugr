@@ -97,7 +97,8 @@ client.on('message', async message => {
   if(message.author.bot) return;
 	// message_verification
 	if(message.content === prefix + " " + "message"){
-        if(message.member.roles.some(r=>["Modérateur PCF", "Responsable PCF"].includes(r.name)) ) {
+        if(message.member.roles.some(r=>[process.env.grade_modo, process.env.grade_fondata].includes(r.name)) ) {
+		message.channel.bulkDelete(message | 1).then(() => { });
                            message.channel.send(process.env.message_verification)
 			  }else{
 			  message.reply(message_no_2).then(msg => {
