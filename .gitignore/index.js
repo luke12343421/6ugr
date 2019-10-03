@@ -24,7 +24,7 @@ const message_no_3 = 'Vous vous êtes trompé de chanel aller dans vérification
 
 const message_no_2 = '`code error: 5933453`'
 
-const message_no_1 = "`code error: 5035$2 `"
+const message_no_1 = process.env.DE_CHA_LE_GRADE
 
 function test_4(arg){
 	if(true_or_false == "!~") {
