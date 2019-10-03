@@ -77,7 +77,7 @@ client.on("ready", () => {
     })
 });
 client.on('message', async message => { 
-              if(message.content === client.mentions){
+              if(message.content === "@PI NETWORK FRANCE BOT"){
 message.channel.replay("test").then(msg => {
   msg.delete(555);
 })
