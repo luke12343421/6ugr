@@ -26,10 +26,12 @@ const message_no_2 = '`code error: 5933453`'
 
 const message_no_1 = process.env.DE_CHA_LE_GRADE
 
+const setActivity_1a = process.env.setActivity_1
+
 function test_4(arg){
 	if(true_or_false == "!~") {
   setTimeout(test_1, timer_event, 'funky');
-    client.user.setActivity ("rien ", { type: 'WATCHING' });
+    client.user.setActivity (setActivity_1a, { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live} !`, { type: 'STREAMING', url: url_live})
 		  setTimeout(test_1, timer_event, 'funky');
