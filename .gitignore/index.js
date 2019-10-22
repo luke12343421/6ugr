@@ -199,9 +199,11 @@ client.on('message', async message => {
     msg.delete(timer_delete);
     })
 	  }else{
-    message.member.addRole(GroupID1)
+        message.member.addRole(GroupID1)
      message.channel.bulkDelete(message | 1).then(() => { });
-    }
+    message.replay(`message no trouver dls s'est un erreur du programme dls`).thel(msg => {
+msg.delete(timer_delete);
+})}
 	    if(message.content === prefix + " " + "Verification") {
 	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
     message.channel.bulkDelete(message | 1).then(() => { });
@@ -209,9 +211,12 @@ client.on('message', async message => {
     msg.delete(timer_delete);
     })
 	  }else{
-    message.member.addRole(GroupID1)
+    
+     message.member.addRole(GroupID1)
      message.channel.bulkDelete(message | 1).then(() => { });
-    }
+    message.replay(`message no trouver dls s'est un erreur du programme dls`).thel(msg => {
+msg.delete(timer_delete);
+})}
   };
   };
   if(message.content === prefix + " " + "vérification") {
@@ -223,6 +228,9 @@ client.on('message', async message => {
 	  }else{
     message.member.addRole(GroupID1)
      message.channel.bulkDelete(message | 1).then(() => { });
+    message.replay(`message no trouver dls s'est un erreur du programme dls`).thel(msg => {
+msg.delete(timer_delete);
+})
     }
   };
 
