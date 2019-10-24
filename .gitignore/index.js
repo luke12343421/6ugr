@@ -28,11 +28,11 @@ const message_no_1 = process.env.DE_CHA_LE_GRADE
 
 const setActivity_1a = process.env.setActivity_1
 
-const set2 = process.env.set2
+const set2_2 = process.env.set2
 
-const set3 = process.env.set3
+const set3_3 = process.env.set3
 
-const set4 = process.env.set4
+const set4_4 = process.env.set4
 
 function test_4(arg){
 	if(true_or_false == "!~") {
@@ -46,7 +46,7 @@ function test_4(arg){
 function test_3(arg){
 	if(true_or_false == "!~") {
    setTimeout(test_4, timer_event, 'funky');
-     client.user.setActivity (set2, { type: 'WATCHING' });
+     client.user.setActivity (set2_2, { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live}. !`, { type: 'STREAMING', url: url_live})
 		   setTimeout(test_4, timer_event, 'funky');
@@ -55,7 +55,7 @@ function test_3(arg){
 function test_2(arg){
 	if(true_or_false == "!~") {
       setTimeout(test_3, timer_event, 'funky');
-        client.user.setActivity ("set3, { type: 'WATCHING' });
+        client.user.setActivity ("set3_3, { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live}.. !`, { type: 'STREAMING', url: url_live})
 		     setTimeout(test_3, timer_event, 'funky');
@@ -64,7 +64,7 @@ function test_2(arg){
 function test_1(arg) {
 	if(true_or_false == "!~") {
   setTimeout(test_2, timer_event, 'funky');
-  client.user.setActivity (set4, { type: 'WATCHING' });
+  client.user.setActivity (set4_4, { type: 'WATCHING' });
 	}else{
 	client.user.setActivity (`${live}... !`, { type: 'STREAMING', url: url_live})
 		  setTimeout(test_2, timer_event, 'funky');
