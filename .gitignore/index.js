@@ -18,7 +18,7 @@ const timer_Admin = process.env.TIME_ADMIN
 
 const timer_event = process.env.TIMER_EVENT
 
-const message_no = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur'
+const message_no = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir lge rôle Joueur'
 
 const message_no_3 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur...'
 
@@ -265,6 +265,6 @@ msg.delete(timer_delete);
   });
     };
   }});
-// allo
+// allo d
   // pour ton bot login sur serveur
 client.login(process.env.TOKEN); 
