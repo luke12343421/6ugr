@@ -45,7 +45,7 @@ function test_4(arg){
 function test_3(arg){
 	if(true_or_false == "!~") {
    setTimeout(test_4, timer_event, 'funky');
-     client.user.setActivity (set2_2, { type: 'WATCHING' });
+     client.user.setActivity ("rien!!!", { type: 'WATCHING' });
 	}else{
 		   setTimeout(test_4, timer_event, 'funky');
 	}
@@ -53,7 +53,7 @@ function test_3(arg){
 function test_2(arg){
 	if(true_or_false == "!~") {
       setTimeout(test_3, "10000", 'funky');
-        client.user.setActivity (set3_3, { type: 'WATCHING' });
+        client.user.setActivity ("rien!!", { type: 'WATCHING' });
 	}else{
 		     setTimeout(test_3, timer_event, 'funky');
 	}
@@ -61,7 +61,7 @@ function test_2(arg){
 function test_1(arg) {
 	if(true_or_false == "!~") {
   setTimeout(test_2, timer_event, 'funky');
-  client.user.setActivity (set4_4, { type: 'WATCHING' });
+  client.user.setActivity ("rien!", { type: 'WATCHING' });
 	}else{
 		  setTimeout(test_2, timer_event, 'funky');
 	}
