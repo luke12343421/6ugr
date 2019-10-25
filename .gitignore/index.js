@@ -39,7 +39,6 @@ function test_4(arg){
   setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity (setActivity_1a, { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (`${live} !`, { type: 'STREAMING', url: url_live})
 		  setTimeout(test_1, timer_event, 'funky');
 	}
 }
@@ -48,7 +47,6 @@ function test_3(arg){
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity (set2_2, { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (`${live}. !`, { type: 'STREAMING', url: url_live})
 		   setTimeout(test_4, timer_event, 'funky');
 	}
 }
@@ -57,7 +55,6 @@ function test_2(arg){
       setTimeout(test_3, "10000", 'funky');
         client.user.setActivity (set3_3, { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (`${live}.. !`, { type: 'STREAMING', url: url_live})
 		     setTimeout(test_3, timer_event, 'funky');
 	}
 }
@@ -66,12 +63,11 @@ function test_1(arg) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity (set4_4, { type: 'WATCHING' });
 	}else{
-	client.user.setActivity (`${live}... !`, { type: 'STREAMING', url: url_live})
 		  setTimeout(test_2, timer_event, 'funky');
 	}
 }
 client.on("ready", () => {
-    client.user.setActivity ("bot reload or mise ajour ;) 😉", { type: 'WATCHING' }).then(msg => {
+    client.user.setActivity ("bot reload !or mise a jour ;) 😉", { type: 'WATCHING' }).then(msg => {
     setTimeout(test_1, 4000, 'funky');
     })
     console.log("Servers:")
