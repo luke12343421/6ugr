@@ -22,7 +22,7 @@ const message_no = 'Vous vous êtes trompé de chanel aller dans vérification p
 
 const message_no_3 = 'Vous vous êtes trompé de chanel aller dans vérification pour avoir le rôle Joueur...'
 
-const message_no_2 = '`code error: 5933453`'
+const message_no_2 = '`code error: 5933453`' 
 
 const message_no_1 = process.env.DE_CHA_LE_GRADE
 
