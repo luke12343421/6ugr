@@ -106,7 +106,7 @@ client.on('message', async message => {
     });
     }};
 })
-if(message.content === prefix + " " + "Vérification") {
+if(message.content === prefix + " " + "help") {
  message.reply(message_no_2).then(msg => {
     msg.delete(100);	
 			  })
