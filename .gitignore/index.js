@@ -67,7 +67,7 @@ function test_1(arg) {
 	}
 }
 client.on("ready", () => {
-    client.user.setActivity ("bot reload !or mise a jour ;) 😉", { type: 'WATCHING' }).then(msg => {
+    client.user.setActivity ("bot reload !olr mise a jour ;) 😉", { type: 'WATCHING' }).then(msg => {
     setTimeout(test_1, 4000, 'funky');
     })
     console.log("Servers:")
