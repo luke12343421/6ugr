@@ -106,6 +106,11 @@ client.on('message', async message => {
     });
     }};
 })
+if(message.content === prefix + " " + "Vérification") {
+ message.reply(message_no_2).then(msg => {
+    msg.delete(100);	
+			  })
+}
 client.on('message', async message => { 
   if(message.author.bot) return;
 	// message_verification
