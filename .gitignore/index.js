@@ -40,7 +40,7 @@ function test_4(arg){
   setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity (setActivity_1a, { type: 'WATCHING' });
 	}else{
-    console.log('test_4 rater')
+     client.user.setActivity (setActivity_1a, { type: 'WATCHING' });
 		  setTimeout(test_1, timer_event, 'funky');
 	}
 }
@@ -50,7 +50,7 @@ function test_3(arg){
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("rien!!!", { type: 'WATCHING' });
 	}else{
-    console.log('test_3 rater')
+      client.user.setActivity ("rien!!!", { type: 'WATCHING' });
 		   setTimeout(test_4, timer_event, 'funky');
 	}
 }
@@ -60,7 +60,7 @@ function test_2(arg){
       setTimeout(test_3, "10000", 'funky');
         client.user.setActivity ("rien!!", { type: 'WATCHING' });
 	}else{
-    console.log('test_2 rater')
+          client.user.setActivity ("rien!!", { type: 'WATCHING' });
 		     setTimeout(test_3, timer_event, 'funky');
 	}
 }
@@ -70,7 +70,7 @@ function test_1(arg) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("rien!", { type: 'WATCHING' });
 	}else{
-    console.log('test_1 rater')
+    client.user.setActivity ("rien!", { type: 'WATCHING' });
 		  setTimeout(test_2, timer_event, 'funky');
 	}
 }
