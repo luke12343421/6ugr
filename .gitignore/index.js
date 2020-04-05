@@ -66,6 +66,11 @@ function test_1(arg) {
 		  setTimeout(test_2, timer_event, 'funky');
 	}
 }
+client.on('error', err => {
+  console.error(err);
+  process.exit(1);
+});
+
 client.on("ready", () => {
     client.user.setActivity ("error :(", { type: 'WATCHING' }).then(msg => {
     setTimeout(() => {
