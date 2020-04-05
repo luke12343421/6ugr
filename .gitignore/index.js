@@ -106,12 +106,12 @@ client.on('message', async message => {
   if(message.content === prefix + " " + "test"){
     message.channel.bulkDelete(1)
 message.reply(` my ${client.ping} ms `).then(msg => {
-  msg.delete(555);
+  msg.delete(5000);
 })
 };
 if(message.content === prefix + " " + "help"){
   message.reply("error").then(msg => {
-  msg.delete(555);
+  msg.delete(5000);
 })
    }
   });
