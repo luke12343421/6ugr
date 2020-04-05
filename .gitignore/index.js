@@ -95,7 +95,7 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-client.user.setActivity ("rien!", { type: 'WATCHING' });
+client.user.setActivity (args[], { type: 'WATCHING' });
 };
 if(message.content === prefix + " " + "help"){
   message.reply("error")(msg => {
