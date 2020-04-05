@@ -74,6 +74,7 @@ client.on('error', err => {
 client.on("ready", () => {
     client.user.setActivity ("error :(", { type: 'WATCHING' });
     setTimeout(test_1, 2000, 'funky');
+    setTimeout(message.channel.id('695408063078858794').send("test"), 2000, 'funky');
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
@@ -95,7 +96,7 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-client.user.setActivity (args[], { type: 'WATCHING' });
+client.user.setActivity (args[""], { type: 'WATCHING' });
 };
 if(message.content === prefix + " " + "help"){
   message.reply("error")(msg => {
