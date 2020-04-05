@@ -267,5 +267,5 @@ if(message.content === prefix + " " + "help") {
     };
   }});
 // allo d
-  // pour ton bot login sur serveur
+  // pour ton bot login sur serveurf
 client.login(process.env.TOKEN); 
