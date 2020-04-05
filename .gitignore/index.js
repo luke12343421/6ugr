@@ -95,7 +95,10 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-   test_1(arg, any); 
+   setTimeout(test_1, 100, 'funky').catch (err); {
+           console.warn('Failed to respond to mention.');
+           console.warn(err);
+       }
 };
 if(message.content === prefix + " " + "help"){
   message.reply("error")(msg => {
