@@ -103,7 +103,7 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-message.send(` ${client.ping} `)
+message.reply(` my ${client.ping} ms `)
 };
 if(message.content === prefix + " " + "help"){
   message.reply("error")(msg => {
