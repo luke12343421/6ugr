@@ -72,11 +72,8 @@ client.on('error', err => {
 });
 
 client.on("ready", () => {
-    client.user.setActivity ("error :(", { type: 'WATCHING' }).then(msg => {
-    setTimeout(() => {
-  test_1;
-}, 1000);
-    })
+    client.user.setActivity ("error :(", { type: 'WATCHING' });
+    setTimeout(test_1, 2000, 'funky');
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
