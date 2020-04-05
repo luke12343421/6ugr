@@ -95,8 +95,9 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-   let args = message.content.split(" ").slice()
-  }
+   test_1(arg)
+
+  });
 if(message.content === prefix + " " + "help"){
   message.reply("error")(msg => {
   msg.delete(555);
