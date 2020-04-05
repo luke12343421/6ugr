@@ -68,7 +68,9 @@ function test_1(arg) {
 }
 client.on("ready", () => {
     client.user.setActivity ("error :(", { type: 'WATCHING' }).then(msg => {
-    setTimeout(test_1, 200, 'funky');
+    setTimeout(() => {
+  test_1;
+}, 1000);
     })
     console.log("Servers:")
     client.guilds.forEach((guild) => {
