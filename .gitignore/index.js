@@ -103,10 +103,12 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-message.reply(` my ${client.ping} ms `)
+message.reply(` my ${client.ping} ms `).then(msg => {
+  msg.delete(555);
+})
 };
 if(message.content === prefix + " " + "help"){
-  message.reply("error")(msg => {
+  message.reply("error").then(msg => {
   msg.delete(555);
 })
    }
