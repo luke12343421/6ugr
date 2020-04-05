@@ -104,7 +104,8 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-    message.channel.bulkDelete(args[1])
+    let args = message.content.split(" ").slice(2);
+    message.channel.bulkDelete(args[0])
 message.reply(` my ${client.ping} ms `).then(msg => {
   msg.delete(555);
 })
