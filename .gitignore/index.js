@@ -74,7 +74,7 @@ client.on('error', err => {
 client.on("ready", () => {
     client.user.setActivity ("error :(", { type: 'WATCHING' });
     setTimeout(test_1, 2000, 'funky');
-    setTimeout(channel.id('695408063078858794').send("test"), 2000, 'funky');
+    setTimeout(console.log('test'), 2000, 'funky');
     console.log("Servers:")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
