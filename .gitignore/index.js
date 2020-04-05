@@ -50,7 +50,7 @@ function test_3(arg){
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("rien!!!", { type: 'WATCHING' });
 	}else{
-      client.user.setActivity ("rien!!!", { type: 'WATCHING' });
+      client.user.setActivity ("paladium!!!", { type: 'WATCHING' });
 		   setTimeout(test_4, 10000, 'funky');
 	}
 }
@@ -60,7 +60,7 @@ function test_2(arg){
       setTimeout(test_3, "10000", 'funky');
         client.user.setActivity ("rien!!", { type: 'WATCHING' });
 	}else{
-          client.user.setActivity ("rien!!", { type: 'WATCHING' });
+          client.user.setActivity ("paladium!!", { type: 'WATCHING' });
 		     setTimeout(test_3, 10000, 'funky');
 	}
 }
@@ -70,7 +70,7 @@ function test_1(arg) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("rien!", { type: 'WATCHING' });
 	}else{
-    client.user.setActivity ("rien!", { type: 'WATCHING' });
+    client.user.setActivity ("paladium!", { type: 'WATCHING' });
 		  setTimeout(test_2, 10000, 'funky');
 	}
 }
@@ -83,6 +83,7 @@ client.on("ready", () => {
     client.user.setActivity ("error :(", { type: 'WATCHING' });
     setTimeout(test_1, 2000, 'funky');
     console.log("Servers:")
+    
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
 
@@ -103,6 +104,7 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
+    message.channel.bulkDelete(args[1])
 message.reply(` my ${client.ping} ms `).then(msg => {
   msg.delete(555);
 })
