@@ -36,33 +36,41 @@ const set4_4 = process.env.set4
 
 function test_4(arg){
 	if(true_or_false == "!~") {
+    console.log('test_4 ru')
   setTimeout(test_1, timer_event, 'funky');
     client.user.setActivity (setActivity_1a, { type: 'WATCHING' });
 	}else{
+    console.log('test_4 rater')
 		  setTimeout(test_1, timer_event, 'funky');
 	}
 }
 function test_3(arg){
 	if(true_or_false == "!~") {
+    console.log('test_3 ru')
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("rien!!!", { type: 'WATCHING' });
 	}else{
+    console.log('test_3 rater')
 		   setTimeout(test_4, timer_event, 'funky');
 	}
 }
 function test_2(arg){
 	if(true_or_false == "!~") {
+    console.log('test_2 ru')
       setTimeout(test_3, "10000", 'funky');
         client.user.setActivity ("rien!!", { type: 'WATCHING' });
 	}else{
+    console.log('test_2 rater')
 		     setTimeout(test_3, timer_event, 'funky');
 	}
 }
 function test_1(arg) {
 	if(true_or_false == "!~") {
+    console.log('test_1 ru')
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("rien!", { type: 'WATCHING' });
 	}else{
+    console.log('test_1 rater')
 		  setTimeout(test_2, timer_event, 'funky');
 	}
 }
@@ -95,7 +103,7 @@ message.channel.replay("nope").then(msg => {
 client.on('message', async message => { 
   if(message.author.bot) return;
   if(message.content === prefix + " " + "test"){
-
+message.send(` ${client.ping} `)
 };
 if(message.content === prefix + " " + "help"){
   message.reply("error")(msg => {
