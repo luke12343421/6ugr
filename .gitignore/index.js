@@ -237,10 +237,9 @@ msg.delete(timer_delete);
     }
   };
 if(message.content === prefix + " " + "help") {
- message.reply(message_no_2).then(msg => {
-    msg.delete(100);	
-			  })
-}
+ message.reply(message_no_2);
+ message.send("`help 1 test`");
+};
   if(message.content === prefix + " " + "verification") {
 	  if(message.member.roles.some(r=>["Pionnier"].includes(r.name)) ) {
     message.channel.bulkDelete(message | 1).then(() => { });
