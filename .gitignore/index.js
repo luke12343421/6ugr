@@ -50,7 +50,7 @@ function test_3(arg){
    setTimeout(test_4, timer_event, 'funky');
      client.user.setActivity ("rien!!!", { type: 'WATCHING' });
 	}else{
-      client.user.setActivity ("paladium!!!", { type: 'WATCHING' });
+      client.user.setActivity (`paladium!!! ${client.ping} ms`, { type: 'WATCHING' });
 		   setTimeout(test_4, 10000, 'funky');
 	}
 }
@@ -60,7 +60,7 @@ function test_2(arg){
       setTimeout(test_3, "10000", 'funky');
         client.user.setActivity ("rien!!", { type: 'WATCHING' });
 	}else{
-          client.user.setActivity ("paladium!!", { type: 'WATCHING' });
+          client.user.setActivity (`paladium!! ${client.ping} ms`, { type: 'WATCHING' });
 		     setTimeout(test_3, 10000, 'funky');
 	}
 }
@@ -70,7 +70,7 @@ function test_1(arg) {
   setTimeout(test_2, timer_event, 'funky');
   client.user.setActivity ("rien!", { type: 'WATCHING' });
 	}else{
-    client.user.setActivity ("paladium!", { type: 'WATCHING' });
+    client.user.setActivity (`paladium! ${client.ping} ms`, { type: 'WATCHING' });
 		  setTimeout(test_2, 10000, 'funky');
 	}
 }
