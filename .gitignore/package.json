@@ -8,7 +8,10 @@
       "dev": true,
       "integrity": "sha512-mN9UolOs4WX09QkheU1ELkVy2WPnwonlO3XMdN8JF8fQqRVgVTR21xDbvEOUsbwz6Zwjq7ji9yzyjuXqDPalxg==",
       "resolved": "https://registry.npmjs.org/@ava/babel-plugin-throws-helper/-/babel-plugin-throws-helper-3.0.0.tgz",
-      "version": "3.0.0"
+      "version": "3.0.0",
+      "engines": {
+    "node": "10.19.0"
+  }
     },
     "@ava/babel-preset-stage-4": {
       "dev": true,
