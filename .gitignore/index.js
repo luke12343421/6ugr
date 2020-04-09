@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const prefix = process.env.PREFIX
 
 const url_live = process.env.URL_LIVE_2
-
+ 
 const live = process.env.LIVE
 
 const GroupID1 = process.env.GRADE
